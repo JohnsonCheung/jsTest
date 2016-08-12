@@ -3,8 +3,8 @@
 </head>
 <body>
 <div id="body">
-a = <input v-model="a"/><br>
-b = <input v-model="b"/><br>
+a = <input v-model="a" lazy number/><br>
+b = <input v-model="b" number/><br>
 c = <input disabled v-model="c"/><br>
 c = {{c}}<hr>
 <label><input type="checkbox" v-model="chkBox" value="aa"/>aa</label><br>
@@ -17,11 +17,24 @@ c = {{c}}<hr>
 <span>Picked: {{ picked }}</span>
 <hr>
 <select v-model="selected">
-  <option selected>A</option>
+  <option>A</option>
   <option>B</option>
-  <option>C</option>
+  <option selected>C</option>
 </select><br>
 selected {{selected}}
+<hr>
+<select v-model="selected1" multiple>
+  <option>A</option>
+  <option selected>B</option>
+  <option>C</option>
+</select><br>
+selected {{selected1}}
+<hr>
+<select v-model="selected">
+  <option v-for="i in options" :value="i.value">{{i.text}}
+  </select>
+<span>Selected: {{ selected }}</span>
+
 </div>
 <script src="a.js"></script>
 </body>

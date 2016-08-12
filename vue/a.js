@@ -6,7 +6,12 @@ var aa = {};
         data: {
             chkBox: [],
             a: 1,
-            b: 2
+            b: 2,
+            options: [
+              { text: 'One', value: 'A' },
+              { text: 'Two', value: 'B' },
+              { text: 'Three', value: 'C' }
+            ]
         },
         computed: {
             c: function c() {
