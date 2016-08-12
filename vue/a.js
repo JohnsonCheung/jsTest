@@ -4,6 +4,7 @@ var aa = {};
     var vueOpt = {
         el : "#body",
         data: {
+            chkBox: [],
             a: 1,
             b: 2
         },
