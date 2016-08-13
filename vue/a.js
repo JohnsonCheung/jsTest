@@ -1,4 +1,5 @@
 var aa = {};
+//他fggh
 (function a(Vue,aa) {
     'use strict';
     var el = '#body';
