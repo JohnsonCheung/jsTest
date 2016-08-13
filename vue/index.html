@@ -1,0 +1,40 @@
+<head>
+<script src="vue.min.js"></script>
+</head>
+<body>
+<div id="body">
+a = <input v-model="a" lazy number/><br>
+b = <input v-model="b" number/><br>
+c = <input disabled v-model="c"/><br>
+c = {{c}}<hr>
+<label><input type="checkbox" v-model="chkBox" value="aa"/>aa</label><br>
+<label><input type="checkbox" v-model="chkBox" value="bb"/>bb</label><br>
+<label><input type="checkbox" v-model="chkBox" value="cc" />cc</label><br>
+{{chkBox|json}}<br>
+<hr>
+<label><input type="radio" value="One" v-model="picked">One1</label><br>
+<label><input type="radio" value="Two" v-model="picked">Two1</label><br>
+<span>Picked: {{ picked }}</span>
+<hr>
+<select v-model="selected">
+  <option>A</option>
+  <option>B</option>
+  <option selected>C</option>
+</select><br>
+selected {{selected}}
+<hr>
+<select v-model="selected1" multiple>
+  <option>A</option>
+  <option selected>B</option>
+  <option>C</option>
+</select><br>
+selected {{selected1}}
+<hr>
+<select v-model="selected">
+  <option v-for="i in options" :value="i.value">{{i.text}}
+  </select>
+<span>Selected: {{ selected }}</span>
+
+</div>
+<script src="a.js"></script>
+</body>
