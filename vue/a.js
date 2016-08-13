@@ -8,14 +8,14 @@ var aa = {};
               { text: 'One', value: 'A' },
               { text: 'Two', value: 'B' },
               { text: 'Three', value: 'C' }
-    ]
+    ];
+    function c() {
+        return this.a+this.b;
+    }
     var vueOpt = {
         el : "#body",
-        data: { chkBox, a,b,options},
-        computed: {
-            c: function c() {
-                return this.a+this.b;
-            }
+        data: {chkBox,a,b,options},
+        computed: {c},
         }
     }
 
