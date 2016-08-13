@@ -1,8 +1,9 @@
 var aa = {};
 (function a(Vue,aa) {
     'use strict';
+    var el = '#body';
     var vueOpt = {
-        el : "#body",
+        el,
         data: {
             chkBox: [],
             a: 1,
